@@ -4,11 +4,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-.App {
-    background-color: #e5e8e8;
-    color: #4e545c;
     font-family: 'Quicksand';
 }
 
@@ -18,6 +13,13 @@ main {
     align-items: center;
     justify-content: center;
     height: 100vh;
+    background-color: #e5e8e8;
+    color: #4e545c;
+}
+
+main.dark-mode {
+    background-color: #000401;
+    color: #e5e8e8;
 }
 
 .title {
@@ -33,4 +35,9 @@ footer {
     color: #e5e8e8;
     font-weight: 400;
     text-align: center;
+}
+
+footer.dark-mode {
+    background-color: #8d9797;
+    color: #000401;
 }

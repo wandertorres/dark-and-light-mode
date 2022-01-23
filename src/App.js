@@ -6,32 +6,37 @@ export default function App() {
   const [activeDark, setActiveDark] = useState(false);
   const [titleH1, setTitleH1] = useState('Light Mode ON');
   const [titleButton, setTitleButton] = useState('Dark Mode');
+  const [className, setclassName] = useState("");
 
   const changeText = () => {
-    if(activeDark) {
-      setTitleH1('Light Mode ON');
-      setTitleButton('Dark Mode');
-    } else {
-      setTitleH1('Dark Mode ON');
-      setTitleButton('Light Mode');
-    }
+    activeDark ? setTitleH1('Light Mode ON') : setTitleH1('Dark Mode ON');
+    activeDark ? setTitleButton('Dark Mode') : setTitleButton('Light Mode');
+  }
+
+  const changeStyle = () => {
+    activeDark ? setclassName("") : setclassName("dark-mode");
   }
   
   const changeMode = () => {
     setActiveDark(!activeDark);
     changeText();
+    changeStyle();
   }
 
   return(
-    <div className="App">
-    <main>
-      <h1 className="title">{titleH1}</h1>
-      <Button titleButton={titleButton} changeMode={changeMode}/>
-    </main>
+    <>
+      <main className={className}>
+        <h1 className="title">{titleH1}</h1>
+        <Button 
+          className={className} 
+          titleButton={titleButton} 
+          changeMode={changeMode}
+        />
+      </main>
 
-    <footer>
-      Dark and Light Mode by Wander Torres
-    </footer>
-    </div>
+      <footer className={className}>
+        Dark and Light Mode by Wander Torres
+      </footer>
+    </>
   );
 }

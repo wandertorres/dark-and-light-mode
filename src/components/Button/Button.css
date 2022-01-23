@@ -1,14 +1,25 @@
 button {
     border-radius: 40px;
-    font-size: 1.5em;
+    font-size: 1.5rem;
     height: 60px;
     width: 200px;
     border: none;
     background-color: #4e545c;
     color: #e5e8e8;
-    transition: all 0.3s linear;
+    transition: all 0.2s linear;
+    font-weight: 600;
 }
 
 button:hover {
     background-color: #000401;
+}
+
+button.dark-mode {
+    background-color: #e5e8e8;
+    color: #4e545c;
+}
+
+button.dark-mode:hover {
+    background-color: #4e545c;
+    color: #e5e8e8;
 }

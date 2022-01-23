@@ -1,7 +1,9 @@
 import './Button.css';
 
-export default function Button({titleButton, changeMode}) {
+export default function Button({className, titleButton, changeMode}) {
     return(
-        <button onClick={() => changeMode()}>{titleButton}</button>
+        <button className={className} onClick={() => changeMode()}>
+            {titleButton}
+        </button>
     );
 }
