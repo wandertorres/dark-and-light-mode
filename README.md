@@ -4,7 +4,7 @@
 
 ## Instruções para executar localmente
 
- - git clone 
+ - git clone https://github.com/wandertorres/dark-and-light-mode.git
  - Entrar na pasta do projeto
  - Executar npm i
  - Executar npm start
