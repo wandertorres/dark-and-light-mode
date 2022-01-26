@@ -35,7 +35,7 @@ export default function App() {
       </main>
 
       <footer className={className}>
-        Dark and Light Mode by Wander Torres
+        <span>Dark and Light Mode by Wander Torres</span>
       </footer>
     </>
   );
